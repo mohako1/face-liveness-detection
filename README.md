@@ -41,7 +41,7 @@ This project addresses that gap by building a face liveness detection (anti-spoo
   - Face detection using YuNet
   - i used 0.25 margin before cropping
   - standardization
-Dataset: https://drive.google.com/file/d/1tScS40vBZUYuGva5kyY1KMmwZvYavCCC/view?usp=sharing
+- Dataset: https://drive.google.com/file/d/1tScS40vBZUYuGva5kyY1KMmwZvYavCCC/view?usp=sharing
 
 ## Training Pipeline
 
