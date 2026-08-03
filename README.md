@@ -50,11 +50,11 @@ This project addresses that gap by building a face liveness detection (anti-spoo
 - Loss function: cross-entropy 
 - Augmentation strategy: (Resize, Random Rotation of 16 degrees, Random Horizontal Flip, Random Color Jitter of (brightness=0.25, contrast=0.20, saturation=0.15, hue=0.06)),
 - Mid training: early stopping / best-checkpoint saving
-- Hardware: GPU used (e.g. T4 via Kaggle)
+- Hardware: GPU used ( T4 via Kaggle)
 
 ## Results
 
-- Final validation accuracy of 82% Compared against the face-antispoof-onnx pipline which scored 77% on the same validation dataset
+- Final validation accuracy of 83% Compared against the face-antispoof-onnx pipline which scored 77% on the same validation dataset
 
 ## Challenges & Debugging Journey
 
