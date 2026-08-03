@@ -46,7 +46,7 @@ This project addresses that gap by building a face liveness detection (anti-spoo
 ## Training Pipeline
 
 - Framework: PyTorch
-- Key hyperparameters (final config): optimzier = SGD, lr = 7e-4, LR scheduler (step size = 7/gamma = 0.3), batch size = 256, epochs = 25, dropout = .75
+- Key hyperparameters (final config): optimzier = SGD, lr = 7e-4, LR scheduler (step size = 7/gamma = 0.3), batch size = 256, epochs = 25, dropout = 0.75
 - Loss function: cross-entropy 
 - Augmentation strategy: (Resize, Random Rotation of 16 degrees, Random Horizontal Flip, Random Color Jitter of (brightness=0.25, contrast=0.20, saturation=0.15, hue=0.06)),
 - Mid training: early stopping / best-checkpoint saving
@@ -61,13 +61,14 @@ This project addresses that gap by building a face liveness detection (anti-spoo
 -**Augmentation Limit**: any Augmentation further than the Augmentation mentioned did caused an underfitting and didn't really help the overfitting problem past the brightness of 0.2, contrast of 0.15, saturation of 0.15, and hue of 0.6
 - **LR scheduler tuning**: initial 7 config caused a sharp plateau (too-early, too-aggressive decay); retuning step_size/gamma unlocked a big accuracy jump
 - **Class imbalance**: tried Under sampling 
-- **Overfitting past a val peak**: kept hitting really big Overfitting so i used in first a dropout of 0.2 and weight-decay of 1e-1 and kept increaseing them till a dropout of 0.75 and weight decay of 1e-2 which does decrease the overfitting noticeably but the divergence  was so slow, and actually the model couldn't push the validation accuracy past 77%, so i used only the dropout of 0.75 and no weight decay and worked well and caused the jump to 82%
+- **Overfitting past a val peak**: kept hitting really big Overfitting so i used in first a dropout of 0.2 and weight-decay of 1e-1 and kept increaseing them till a dropout of 0.75 and weight decay of 1e-2 which does decrease the overfitting noticeably but the divergence  was so slow, and actually the model couldn't push the validation accuracy past 77%, so i used only the dropout of 0.75 and no weight decay and worked well and caused the jump to 83%
 - **ONNX export/conversion issues**: quantized model ops unsupported by conversion tooling, resolved by keeping quantized models in ONNX Runtime rather than converting back to PyTorch
 
 
 ## Future Work
 
 - using auxiliary supervision such as FFT head, or/and depth head during training get the benefits of the information in the frequency domain and the depth information
+- is this good enough? actually no, there is still a way more space for improvement even with the current architecture the model still overfits and could be improved with better hyperparameter optimization
 
 ## Acknowledgements
 
