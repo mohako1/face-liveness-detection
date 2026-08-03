@@ -71,7 +71,7 @@ Dataset: https://drive.google.com/file/d/1tScS40vBZUYuGva5kyY1KMmwZvYavCCC/view?
 ## Acknowledgements
 
 - face-antispoof-onnx :https://github.com/facenox/face-antispoof-onnx
-  Datasets used:
+- Datasets used:
   - Anti-Spoofing Dataset, 30,000 sets: https://www.kaggle.com/datasets/tapakah68/anti-spoofing
   - Liveness Detection Replay Attack Dataset - 5,000+: https://www.kaggle.com/datasets/axondata/liveness-detection-real-and-display-attacks-5k
   - Asian People - Liveness Detection Video Dataset: https://www.kaggle.com/datasets/trainingdatapro/asian-people-liveness-detection-video-dataset
