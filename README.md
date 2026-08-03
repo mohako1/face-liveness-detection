@@ -46,10 +46,11 @@ This project addresses that gap by building a face liveness detection (anti-spoo
 ## Training Pipeline
 
 - Framework: PyTorch
-- Key hyperparameters (final config): optimzier = SGD, lr = 7e-4, LR scheduler (step size = 9/gamma = 0.3), batch size = 256, epochs = 25, dropout = .75
+- Key hyperparameters (final config): optimzier = SGD, lr = 7e-4, LR scheduler (step size = 7/gamma = 0.3), batch size = 256, epochs = 25, dropout = .75
 - Loss function: cross-entropy 
-- Regularization: augmentation strategy(Resize, Random Rotation of 16 degrees, Random Horizontal Flip, Random Color Jitter of (brightness=0.25, contrast=0.20, saturation=0.15, hue=0.06)),  early stopping / best-checkpoint saving
-- Hardware: GPU used (e.g. T4 via Colab/Kaggle)
+- Augmentation strategy: (Resize, Random Rotation of 16 degrees, Random Horizontal Flip, Random Color Jitter of (brightness=0.25, contrast=0.20, saturation=0.15, hue=0.06)),
+- Mid training: early stopping / best-checkpoint saving
+- Hardware: GPU used (e.g. T4 via Kaggle)
 
 ## Results
 
