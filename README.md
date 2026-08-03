@@ -23,12 +23,12 @@ This project addresses that gap by building a face liveness detection (anti-spoo
 ## Architecture
 
 - Backbone used MobileNetV3-Large
-- I aimed to single frame CNN-Architecture it it's simplicity and ability to be deployed in edge machines and still provide decent accuracy compared to motion based classifiers, and choosed MobileNetV3-Large for its efficiency and lightweight based on the Depthwise separable convolutions and SE blocks, which fitted my objectves well 
+- I aimed to single frame CNN-Architecture to it's simplicity and ability to be deployed in edge machines and still provide decent accuracy compared to motion based classifiers, and choosed MobileNetV3-Large for its efficiency and lightweight based on the Depthwise separable convolutions and SE blocks, which fitted my objectves well 
 - the pipeline: face detection → crop → preprocess → classifier 
 
 ## Dataset
 
-- Source(s): I merged my dataset from multible datasets to cover the different types of spoofing and used step frame of 3 and YuNet for face detection filtering and then performed under sampling on the training dataset
+- Source(s): I merged my dataset from multiple datasets mentioned in the [Acknowledgements](#acknowledgements) section. I merged different datasets to cover the different types of spoofing and used step frame of 3 and YuNet for face detection filtering and then performed under sampling on the training dataset
 - Class distribution(before under sampling):
   | Class   |  count |
   |---------|--------|
